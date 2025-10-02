@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Poppa's Pizza</title>
 
 	<!-- Favicon -->
@@ -16,10 +16,10 @@
 		<header>
 			<img src="images/mascot200.png" alt = "Pizza Mascot">
 			<h1>Poppa's Pizza</h1>
-			<p id = "tagline">Serving GRC students for 50 years!</p>
+			<p id = "tag-line">Serving GRC students for 50 years!</p>
 			<hr>
 			<p>Poppa's Pizza delivers heart-warming, handcrafted pizzas straight from our brick ovens to your stomach!</p>
-			<a id = "contact-button" href = "#" role = "button">Contact Us</a>
+			<a class = "main-button" href = "#" role = "button">Contact Us</a>
 		</header>
 		<form id = "pizza-form" action = "#" method="get"> 
 
@@ -33,6 +33,20 @@
 				<label for ="email">Email Address:</label>
 				<input type = "email" id = "email" name = "email">
 			</fieldset>
+
+			<!-- Pickup or Delivery -->
+			<fieldset>
+				<legend>Select Pickup or Delivery</legend>
+				<label for="pickup">
+					<input type = "radio" id = "pickup" name = "method" value = "pickup">Pickup
+				</label>
+				<label for="delivery">
+					<input type = "radio" id = "delivery" name = "method" value = "delivery">Delivery
+				</label>
+			</fieldset>
+
+			<!-- Add an Order button -->
+			 <button type = "submit">Place Order</button>
 		</form>
 	</main>
 </body>
