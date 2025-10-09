@@ -8,7 +8,7 @@ app.use(express.static('public'));
 
 app.get('/', (req, res) => {
 
-    res.send(`${import.meta.dirname}/views/home.html`);
+    res.sendFile(`${import.meta.dirname}/views/home.html`);
 });
 
 app.listen(PORT, () => {
