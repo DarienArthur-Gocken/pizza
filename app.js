@@ -28,12 +28,25 @@ app.get('/confirm', (req,res) => {
 
 app.get('/admin', (req,res) => {
 
-    res.sendFile(`${import.meta.dirname}/views/admin.html`);
+    res.send(orders);
+    //res.sendFile(`${import.meta.dirname}/views/admin.html`);
 });
 
 app.post('/submit-order', (req,res) => {
 
-    console.log(req.body);
+    const order = {
+        fname: req.body.fname,
+        lname: req.body.lname,
+        email: req.body.email,
+        method: req.body.method,
+        toppings: req.body.toppings, 
+        size: req.body.size,
+        comment: req.body.comment
+    };
+
+    orders.push(order);
+    console.log(orders);
+
     res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
 });
 
