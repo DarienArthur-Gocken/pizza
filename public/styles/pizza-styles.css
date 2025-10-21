@@ -89,6 +89,11 @@ label {
     padding-bottom: .5rem;
 }
 
+.error {
+    color: darkred;
+    display: none;
+}
+
 /* Mobile styles */
 @media (max-width: 480px) {
     #main {

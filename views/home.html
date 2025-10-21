@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Poppa's Pizza</title>
 
+	<!-- Link to Javascript -->
+	<script src ="js/pizza.js" defer></script>
+
 	<!-- Favicon -->
 	<link rel="Icon" href = '/images/pizza_icon.png'>
 
@@ -27,16 +30,20 @@
 			<fieldset>
 				<legend>Contact Info</legend>
 				<label for="fname">First Name:</label>
+				<span id ="err-fname" class ="error">First name cannot be empty!</span>
 				<input type = "text" id = "fname" name = "fname">
 				<label for ="lname">Last Name:</label>
+				<span id ="err-lname" class ="error">Last name cannot be empty!</span>
 				<input type = "text" id = "lname" name = "lname">
 				<label for ="email">Email Address:</label>
+				<span id ="err-email" class ="error">Email cannot be empty!</span>
 				<input type = "email" id = "email" name = "email">
 			</fieldset>
 
 			<!-- Pickup or Delivery -->
 			<fieldset>
 				<legend>Select Pickup or Delivery</legend>
+				<span id ="err-method" class ="error">You must pick a method!</span>
 				<label for="pickup">
 					<input type = "radio" id = "pickup" name = "method" value = "pickup">Pickup
 				</label>
@@ -71,6 +78,7 @@
 					<option value ="medium">Medium</option>
 					<option value="large">Large</option>
 				</select>
+				<span id ="err-size" class ="error">You must pick a size!</span>
 			</fieldset>
 			<!-- Add an Order button -->
 			<button type = "submit">Place Order</button>
