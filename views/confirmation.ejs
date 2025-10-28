@@ -24,7 +24,14 @@
 			<p>Poppa's Pizza delivers heart-warming, handcrafted pizzas straight from our brick ovens to your stomach!</p>
 			<a class = "main-button" href = "/contact-us" role = "button">Contact Us</a>
 		</header>
-        <h1>Thank you for your order!</h1>
+        <h1>Thank you for your order, <%= order.fname %>!</h1>
+		<h2>Order Summary</h2>
+		<p>Name: <%= order.fname %> <%= order.lname %></p>
+		<p>Email: <%= order.email %></p>
+		<p>Toppings: <%= order.toppings %></p>
+		<p>Size: <%= order.size %></p>
+		<p>Comment: <%= order.comment %></p>
+		<p>Date/Time: <%= order.timestamp.toLocaleString() %></p>
 	</main>
 </body>
 </html>
